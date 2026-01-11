@@ -9,37 +9,37 @@ This project focuses on hardware-style correctness, determinism, and clarity rat
 
 Overview :
 
-  This simulator models a single-cycle 32-bit ALU with arithmetic, logical, and shift operations.
-  It produces two outputs per operation:
+    This simulator models a single-cycle 32-bit ALU with arithmetic, logical, and shift operations.
+    It produces two outputs per operation:
 
-  result — 32-bit datapath output
-  flags — condition/status flags (Z, N, C, V)
+    result — 32-bit datapath output
+    flags — condition/status flags (Z, N, C, V)
 
 The model is bit-accurate with respect to its own specification, making it suitable for :
 
-  Hardware modeling practice
-  CPU datapath learning
-  Verification-oriented thinking
-  Foundations for CPU / GPU / ML kernel modeling
+    Hardware modeling practice
+    CPU datapath learning
+    Verification-oriented thinking
+    Foundations for CPU / GPU / ML kernel modeling
 
 Datapath : 
 
-  32-bit unsigned datapath (uint32_t)
-  Wrap-around arithmetic (mod 2^32)
+    32-bit unsigned datapath (uint32_t)
+    Wrap-around arithmetic (mod 2^32)
 
 Operations : 
 
-     Arithmetic : ADD, SUB, MUL
-     Logical : AND, OR, XOR
-     Shifts : SHL, SHR (logical shifts)
+    Arithmetic : ADD, SUB, MUL
+    Logical : AND, OR, XOR
+    Shifts : SHL, SHR (logical shifts)
 
 Shift semantics : 
 
-  Shift amount masked to 5 bits (0..31)
-  Logical shifts only
-  Multi-bit shifts allowed
-  Carry = last bit shifted out
-  Shift by 0 leaves carry = 0 (explicitly defined)
+    Shift amount masked to 5 bits (0..31)
+    Logical shifts only
+    Multi-bit shifts allowed
+    Carry = last bit shifted out
+    Shift by 0 leaves carry = 0 (explicitly defined)
 
 Flag semantics : 
 
@@ -62,11 +62,11 @@ Flag semantics :
 
 Flag update policy :
 
-  Flags are fully overwritten every instruction
+    Flags are fully overwritten every instruction
 
 BIT Accurate to ARM/x86/RISC-V -> No, as certain operations vary from system to system.
 
-      ALU_Simulator/
+    ALU_Simulator/
       ├── alu.h
       ├── alu.cpp
       ├── main.cpp
@@ -76,9 +76,9 @@ Build & Run :
 
 Prerequisites : 
           
-           C++17 compatible compiler
-            macOS: clang++
-            Linux: g++
+    C++17 compatible compiler
+     macOS: clang++
+     Linux: g++
     
 Build Command : 
 
@@ -99,4 +99,4 @@ When tracing is enabled, each ALU operation prints:
   Flags (Z, N, C, V)
 
 
-
+January 10, 2026
