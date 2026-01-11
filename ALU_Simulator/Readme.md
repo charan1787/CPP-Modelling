@@ -92,11 +92,11 @@ Output :
 
 When tracing is enabled, each ALU operation prints:
 
-  Input operands (A, B)
-  Opcode
-  Shift amount (if applicable)
-  Result
-  Flags (Z, N, C, V)
+    Input operands (A, B)
+    Opcode
+    Shift amount (if applicable)
+    Result
+    Flags (Z, N, C, V)
 
 
 January 10, 2026
