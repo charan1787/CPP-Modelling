@@ -29,9 +29,9 @@ Datapath :
 
 Operations : 
 
-  Arithmetic : ADD, SUB, MUL
-  Logical : AND, OR, XOR
-  Shifts : SHL, SHR (logical shifts)
+     Arithmetic : ADD, SUB, MUL
+     Logical : AND, OR, XOR
+     Shifts : SHL, SHR (logical shifts)
 
 Shift semantics : 
 
@@ -43,9 +43,9 @@ Shift semantics :
 
 Flag semantics : 
 
-  Z = (result == 0)
-  N = MSB(result)
-  C:
+     Z = (result == 0)
+     N = MSB(result)
+     C:
 
       ADD: carry-out of bit 31
       SUB: no borrow (A >= B)
@@ -53,7 +53,7 @@ Flag semantics :
       SHR: last LSB shifted out
       MUL: upper 32 bits ≠ 0
 
-  V:
+     V:
 
     ADD: signed overflow
     SUB: signed overflow
@@ -66,21 +66,27 @@ Flag update policy :
 
 BIT Accurate to ARM/x86/RISC-V -> No, as certain operations vary from system to system.
 
-ALU_Simulator/
-├── alu.h
-├── alu.cpp
-├── main.cpp
-└── README.md
+      ALU_Simulator/
+      ├── alu.h
+      ├── alu.cpp
+      ├── main.cpp
+      └── README.md
 
 Build & Run : 
 
 Prerequisites : 
-  C++17 compatible compiler
-    macOS: clang++
-    Linux: g++
+          
+           C++17 compatible compiler
+            macOS: clang++
+            Linux: g++
     
-Build Command : clang++ -std=c++17 main.cpp alu.cpp -o alu_sim
-Run Command : ./alu_sim
+Build Command : 
+
+    clang++ -std=c++17 main.cpp alu.cpp -o alu_sim
+    
+Run Command :  
+
+    ./alu_sim
 
 Output :
 
